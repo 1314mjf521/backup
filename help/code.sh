@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Build 20210712-003
+#Build 20210716-001
 
 ## 导入通用变量与函数
 dir_shell=/ql/shell
@@ -123,7 +123,7 @@ name_js=(
   "$repo5"_jd_bookshop
   "$repo"_jd_cash
   "$repo"_jd_sgmh
-  "$repo"_jd_cfd
+  "$repo6"_jd_cfd
   "$repo"_jd_health
   "$repo"_jd_carnivalcity
   "$repo"_jd_city
@@ -200,7 +200,7 @@ export_codes_sub() {
     local BreakHelpInterval=$(echo $BreakHelpNum | perl -pe "{s|~|-|; s|_|-|}" | sed 's/\(\d\+\)-\(\d\+\)/{\1..\2}/g')
     local BreakHelpNumArray=($(eval echo $BreakHelpInterval))
     local BreakHelpNumVerify=$(echo $BreakHelpNum | sed 's/ //g' | perl -pe "{s|-||; s|~||; s|_||}" | sed 's/^\d\+$//g')
-    local i j k m n t pt_pin_in_log code tmp_grep tmp_my_code tmp_for_other user_num random_num_list
+    local i j k m n t pt_pin_in_log code tmp_grep tmp_my_code tmp_for_other user_num tmp_helptype HelpTemp random_num_list
     local envs=$(eval echo "\$JD_COOKIE")
     local array=($(echo $envs | sed 's/&/ /g'))
     local user_sum=${#array[*]}
@@ -243,7 +243,7 @@ export_codes_sub() {
                 tmp_for_other=""
                 for ((m = 0; m < ${#pt_pin[*]}; m++)); do
                     j=$((m + 1))
-                    if [ $BreakHelpType = 1 ]; then
+                    if [[ $BreakHelpType = "1" ]]; then
                         if [ "$BreakHelpNumVerify" = "" ]; then
                             for ((t = 0; t < ${#BreakHelpNumArray[*]}; t++)); do
                                 [[ "${BreakHelpNumArray[t]}" = "$j" ]] && continue 2
@@ -277,7 +277,7 @@ export_codes_sub() {
                         else
                             k=$((n + 1 - $user_sum))
                         fi
-                        if [ $BreakHelpType = 1 ]; then
+                        if [[ $BreakHelpType = "1" ]]; then
                             if [ "$BreakHelpNumVerify" = "" ]; then
                                 for ((t = 0; t < ${#BreakHelpNumArray[*]}; t++)); do
                                     [[ "${BreakHelpNumArray[t]}" = "$k" ]] && continue 2
@@ -304,7 +304,7 @@ export_codes_sub() {
                     j=$((m + 1))
                     for n in $random_num_list; do
                         [[ $j -eq $n ]] && continue
-                        if [ $BreakHelpType = 1 ]; then
+                        if [[ $BreakHelpType = "1" ]]; then
                             if [ "$BreakHelpNumVerify" = "" ]; then
                                 for ((t = 0; t < ${#BreakHelpNumArray[*]}; t++)); do
                                     [[ "${BreakHelpNumArray[t]}" = "$n" ]] && continue 2
@@ -331,7 +331,7 @@ export_codes_sub() {
                     for ((n = 0; n < ${#pt_pin[*]}; n++)); do
                         [[ $m -eq $n ]] && continue
                         k=$((n + 1))
-                        if [ $BreakHelpType = 1 ]; then
+                        if [[ $BreakHelpType = "1" ]]; then
                             if [ "$BreakHelpNumVerify" = "" ]; then
                                 for ((t = 0; t < ${#BreakHelpNumArray[*]}; t++)); do
                                     [[ "${BreakHelpNumArray[t]}" = "$k" ]] && continue 2
@@ -363,7 +363,7 @@ export_all_codes() {
     [[ $DEBUG = "1" ]] && echo -e "\n#$cur_time 预设的 JD_COOKIE 环境变量数量：`echo $JD_COOKIE | sed 's/&/\n/g' | wc -l`"
     [[ $DEBUG = "1" && "$(echo $JD_COOKIE | sed 's/&/\n/g' | wc -l)" = "1" && "$(echo $JD_COOKIE | grep -o 'pt_key' | wc -l)" -gt 1 ]] && echo -e "\n#$cur_time 检测到您将多个 COOKIES 填写到单个环境变量值，请注意将各 COOKIES 采用 & 分隔，否则将无法完整输出互助码及互助规则！"
     echo -e "\n#$cur_time 从日志提取互助码，编号和配置文件中Cookie编号完全对应，如果为空就是所有日志中都没有。\n\n#$cur_time 即使某个MyXxx变量未赋值，也可以将其变量名填在ForOtherXxx中，jtask脚本会自动过滤空值。\n"
-    if [ $DiyHelpType = "1" ]; then
+    if [[ $DiyHelpType = "1" ]]; then
         echo -e "#$cur_time 您已启用指定活动采用指定互助模板功能！"
     else
         echo -n "#$cur_time 您选择的互助码模板为："
@@ -382,7 +382,7 @@ export_all_codes() {
             ;;
         esac
     fi
-    [[ $BreakHelpType = 1 ]] && echo -e "\n#$cur_time 您已启用屏蔽模式，账号 $BreakHelpNum 将不被助力！"
+    [[ $BreakHelpType = "1" ]] && echo -e "\n#$cur_time 您已启用屏蔽模式，账号 $BreakHelpNum 将不被助力！"
     if [ "$ps_num" -gt 7 ]; then
         echo -e "\n#$cur_time 检测到 code.sh 的线程过多 ，请稍后再试！"
         exit
@@ -586,7 +586,7 @@ log_time=$(date "+%Y-%m-%d-%H-%M-%S")
 log_path="$dir_code/$log_time.log"
 make_dir "$dir_code"
 ps_num="$(ps | grep code.sh | grep -v grep | wc -l)"
-[[ ! -z "$(ps -ef|grep -w 'code.sh'|grep -v grep)" ]] && ps -ef|grep -w 'code.sh'|grep -v grep|awk '{print $3}'|xargs kill -9
+#[[ ! -z "$(ps -ef|grep -w 'code.sh'|grep -v grep)" ]] && ps -ef|grep -w 'code.sh'|grep -v grep|awk '{print $1}'|xargs kill -9
 export_all_codes | perl -pe "{s|京东种豆|种豆|; s|crazyJoy任务|疯狂的JOY|}" | tee $log_path
 sleep 5
 update_help
