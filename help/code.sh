@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Build 20210716-001
+#Build 20210717-001
 
 ## 导入通用变量与函数
 dir_shell=/ql/shell
@@ -590,9 +590,6 @@ ps_num="$(ps | grep code.sh | grep -v grep | wc -l)"
 export_all_codes | perl -pe "{s|京东种豆|种豆|; s|crazyJoy任务|疯狂的JOY|}" | tee $log_path
 sleep 5
 update_help
-
-## 修改curtinlv京东超市兑换脚本的参数
-sed -i "21c cookies='$(echo $JD_COOKIE | sed "s/&/ /g; s/\S*\(pt_key=\S\+;\)\S*\(pt_pin=\S\+;\)\S*/\1\2/g;" | perl -pe "s| |&|g")'" /ql/scripts/curtinlv_JD-Script_jd_blueCoin.py
 
 ## 修改curtinlv入会领豆配置文件的参数
 sed -i "4c JD_COOKIE = '$(echo $JD_COOKIE | sed "s/&/ /g; s/\S*\(pt_key=\S\+;\)\S*\(pt_pin=\S\+;\)\S*/\1\2/g;" | perl -pe "s| |&|g")'" /ql/repo/curtinlv_JD-Script/OpenCard/OpenCardConfig.ini
