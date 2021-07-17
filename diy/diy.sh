@@ -61,7 +61,7 @@
 ## 不想薅这个APP的羊毛就忽略这些脚本，顺便把定时任务注释掉
 
 ## 京东到家账号环境变量（必填，否则跑不了）：
-export JDDJ_CKPATH="/jd/scripts/jdCookie.js"
+export JDDJ_CKPATH="/opt/jd/scripts/jdCookie.js"
 
 
 cat /etc/hosts | grep "raw.githubusercontent.com" -q
