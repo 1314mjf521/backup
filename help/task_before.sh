@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Build 20210715-001
+# Build 20210722-001
 
 ## 东东农场：
 MyFruit1=''
@@ -91,8 +91,16 @@ MyCity1=''
 
 ForOtherCity1=""
 
+
+## 摇钱树：
+MyMoneyTree1=''
+
+ForOtherMoneyTree1=""
+
+
 ## 京喜Token(用于京喜财富岛提现等)
 TokenJxnc1=''
+
 
 env_name=(
   FRUITSHARECODES                     ## 1、东东农场互助码
@@ -110,7 +118,8 @@ env_name=(
   JDHEALTH_SHARECODES                 ## 13、东东健康社区互助码
   CITY_SHARECODES                     ## 14、城城领现金互助码
   JD818_SHARECODES                    ## 15、京东手机狂欢城互助码
-  JXNCTOKENS                          ## 16、京喜Token(京喜财富岛提现用)
+  MONEYTREE_SHARECODES                ## 16、摇钱树
+  JXNCTOKENS                          ## 17、京喜Token(京喜财富岛提现用)
 )
 var_name=(
   ForOtherFruit                       ## 1、东东农场互助规则
@@ -128,11 +137,12 @@ var_name=(
   ForOtherHealth                      ## 13、东东健康社区互助规则
   ForOtherCarni                       ## 14、城城领现金互助规则
   ForOtherCity                        ## 15、京东手机狂欢城互助规则
-  TokenJxnc                           ## 16、京喜Token(京喜财富岛提现用)
+  ForOtherMoneyTree                   ## 16、摇钱树
+  TokenJxnc                           ## 17、京喜Token(京喜财富岛提现用)
 )
 
 combine_sub() {
-    source /ql/config/env.sh
+    source $file_env
     local what_combine=$1
     local combined_all=""
     local tmp1 tmp2
@@ -174,7 +184,7 @@ combine_all() {
 
 ## 临时屏蔽某账号运行活动脚本
 TempBlock_JD_COOKIE(){
-    source /ql/config/env.sh
+    source $file_env
     local envs=$(eval echo "\$JD_COOKIE")
     local array=($(echo $envs | sed 's/&/ /g'))
     for num in ${TempBlockCookie}; do
