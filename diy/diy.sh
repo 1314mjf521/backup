@@ -76,6 +76,7 @@
 # https://t.me/passerbybbot
 
 ##############################  定  义  下  载  代  理  （内置功能）  ##############################
+ExtraShellProxyUrl=https://ghproxy.com/
 if [[ ${EnableExtraShellProxyDownload} == true ]]; then
   DownloadJudgment=${ExtraShellProxyUrl}
 else
