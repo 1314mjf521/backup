@@ -155,18 +155,26 @@ my_scripts_list_13="jd_jxlhb.js"
 
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
-git remote -v | grep "1314mjf521" -wq
-if [ $? -ne 1 ]; then
-  clear
-  echo -e "\033[31m\n非本项目用户禁止使用！\n\033[0m"
-  exit 1
-fi
+
+echo "开始修复宠汪汪脚本"
+cd /opt/jd/scripts && npm i -S png-js
+cd /opt/jd
+echo "修复完成！"
+
+echo "开始修复京东签到环境"
+cd /opt/jd/scripts && npm install axios &
+cd /opt/jd/scripts && npm install date-fns &
+cd /opt/jd
+
+echo "修复完成！"
+
 rand() {
   min=$1
   max=$(($2 - $min + 1))
   num=$(cat /proc/sys/kernel/random/uuid | cksum | awk -F ' ' '{print $1}')
   echo $(($num % $max + $min))
 }
+
 index=1
 for author in $author_list; do
   echo -e "开始下载 $author 的活动脚本：\n"
