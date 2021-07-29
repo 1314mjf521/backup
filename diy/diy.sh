@@ -89,7 +89,7 @@ PROXY_URL=https://ghproxy.com/
 
 ExtraShellProxyUrl=https://ghproxy.com/
 if [[ ${EnableExtraShellProxyDownload} == true ]]; then
-  DownloadJudgment=${ExtraShellProxyUrl}
+  DownloadJudgment=${PROXY_URL}
 else
   DownloadJudgment=
 fi
