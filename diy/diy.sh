@@ -90,7 +90,7 @@ PROXY_URL=https://ghproxy.com/
 
 ##############################  作  者  昵  称  &  脚  本  地  址  &  脚  本  名  称  （必填）  ##############################
 
-author_list="Public ZCY01 passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv"
+author_list="Public ZCY01 passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv CFD"
 
 ## Public
 scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
@@ -144,6 +144,11 @@ my_scripts_list_12="jd_summer_movement_bet.js"
 ## Aaron-lv
 scripts_base_url_13=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
 my_scripts_list_13="jd_jxlhb.js"
+
+scripts_base_url_14=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
+
+my_scripts_list_14="jd_cfd.js"
+
 
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
 
