@@ -87,12 +87,6 @@ if [ $? -ne 0 ]; then
 fi
 PROXY_URL=https://ghproxy.com/
 
-ExtraShellProxyUrl=https://ghproxy.com/
-if [[ ${EnableExtraShellProxyDownload} == true ]]; then
-  PROXY_URL=${PROXY_URL}
-else
-  PROXY_URL=
-fi
 
 ##############################  作  者  昵  称  &  脚  本  地  址  &  脚  本  名  称  （必填）  ##############################
 
