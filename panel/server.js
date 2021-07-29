@@ -152,7 +152,7 @@ async function step1() {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Language': 'zh-cn',
                 'Referer': 'https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport',
-                'User-Agent': User_Agent
+                'User-Agent':  User_Agent,
                 'Host': 'plogin.m.jd.com'
             }
         });
@@ -186,7 +186,7 @@ async function step2() {
                 'Accept': 'application/json, text/plain, */*',
                 'Cookie': cookies,
                 'Referer': 'https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wqlogin2.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=//home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport',
-                'User-Agent': User_Agent
+                'User-Agent': User_Agent,
                 'Host': 'plogin.m.jd.com',
             }
         });
@@ -224,7 +224,7 @@ async function checkLogin() {
                 'Connection': 'Keep-Alive',
                 'Content-Type': 'application/x-www-form-urlencoded; Charset=UTF-8',
                 'Accept': 'application/json, text/plain, */*',
-                'User-Agent': User_Agent
+                'User-Agent':  User_Agent,
             }
         });
 
