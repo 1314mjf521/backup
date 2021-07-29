@@ -107,48 +107,48 @@ scripts_base_url_2=https://gitee.com/SuperManito/scripts/raw/master/
 my_scripts_list_2="jd_try.js"
 
 ## 京东到家
-scripts_base_url_3=${DownloadJudgment}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
+scripts_base_url_3=${PROXY_URL}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
 my_scripts_list_3="jddj_fruit.js jddj_fruit_collectWater.js jddj_bean.js jddj_plantBeans.js jddj_getPoints.js jddj_cookie.js"
 
 ## 龙王
-# scripts_base_url_4=${DownloadJudgment}https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/
-scripts_base_url_4=${DownloadJudgment}https://raw.githubusercontent.com/Huang28/e/main/longzhuzhu/
+# scripts_base_url_4=${PROXY_URL}https://raw.githubusercontent.com/longzhuzhu/nianyu/main/qx/
+scripts_base_url_4=${PROXY_URL}https://raw.githubusercontent.com/Huang28/e/main/longzhuzhu/
 my_scripts_list_4="long_super_redrain.js long_half_redrain.js"
 
 ## Wenmoux
-scripts_base_url_5=${DownloadJudgment}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
+scripts_base_url_5=${PROXY_URL}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
 my_scripts_list_5="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js jd_wxFans.js jd_mb.js"
 
 ## panghu/柠檬
-scripts_base_url_6=${DownloadJudgment}https://raw.githubusercontent.com/panghu999/panghu/master/
+scripts_base_url_6=${PROXY_URL}https://raw.githubusercontent.com/panghu999/panghu/master/
 my_scripts_list_6="jd_wsdlb.js jd_pk.js"
 
 ## moposmall
-scripts_base_url_7=${DownloadJudgment}https://raw.githubusercontent.com/moposmall/Script/main/Me/
+scripts_base_url_7=${PROXY_URL}https://raw.githubusercontent.com/moposmall/Script/main/Me/
 my_scripts_list_7="jx_mc_coin.js jx_mc_emptycabbage.js"
 
 ## curtinlv
-scripts_base_url_8=${DownloadJudgment}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
+scripts_base_url_8=${PROXY_URL}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
 my_scripts_list_8="jd_cashHelp.py jd_jxgc_tuan.py jd_qjd.py"
 
 ## cdle
-scripts_base_url_9=${DownloadJudgment}https://raw.githubusercontent.com/cdle/jd_study/main/
+scripts_base_url_9=${PROXY_URL}https://raw.githubusercontent.com/cdle/jd_study/main/
 my_scripts_list_9="jd_joy_park_help.js jd_morningSc.js jd_sendBeans.js jd_earn30.js"
 
 ## smiek2221
-scripts_base_url_10=${DownloadJudgment}https://raw.githubusercontent.com/smiek2221/scripts/master/
+scripts_base_url_10=${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/
 my_scripts_list_10="jd_sign_graphics.js jd_joy_steal.js gua_wealth_island.js jd_summer_movement.js jd_summer_movement_help.js jd_necklace.js ZooFaker_Necklace.js"
 
 ## jiulan
-scripts_base_url_11=${DownloadJudgment}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
+scripts_base_url_11=${PROXY_URLhttps://raw.githubusercontent.com/jiulan/platypus/main/scripts/
 my_scripts_list_11="jd_shop_sign.js jd_joypark_task.js"
 
 ## star261
-scripts_base_url_12=${DownloadJudgment}https://raw.githubusercontent.com/star261/jd/main/scripts/
+scripts_base_url_12=${PROXY_URL}https://raw.githubusercontent.com/star261/jd/main/scripts/
 my_scripts_list_12="jd_summer_movement_bet.js"
 
 ## Aaron-lv
-scripts_base_url_13=${DownloadJudgment}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
+scripts_base_url_13=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
 my_scripts_list_13="jd_jxlhb.js"
 
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
