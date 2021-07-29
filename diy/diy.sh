@@ -72,10 +72,21 @@
 ## 京东到家账号环境变量（必填）：
 ## export JDDJ_CKPATH="/jd/scripts/jdCookie.js"  # 指定组合CK环境变量配置文件路径
 
-## 提交互助码到公共库（每天早上 7 点）
-# https://t.me/passerbybbot
+
 
 ##############################  定  义  下  载  代  理  （内置功能）  ##############################
+
+cat /etc/hosts | grep "raw.githubusercontent.com" -q
+if [ $? -ne 0 ]; then
+  echo "199.232.28.133 raw.githubusercontent.com" >>/etc/hosts
+  echo "199.232.68.133 raw.githubusercontent.com" >>/etc/hosts
+  echo "185.199.108.133 raw.githubusercontent.com" >>/etc/hosts
+  echo "185.199.109.133 raw.githubusercontent.com" >>/etc/hosts
+  echo "185.199.110.133 raw.githubusercontent.com" >>/etc/hosts
+  echo "185.199.111.133 raw.githubusercontent.com" >>/etc/hosts
+fi
+PROXY_URL=https://ghproxy.com/
+
 ExtraShellProxyUrl=https://ghproxy.com/
 if [[ ${EnableExtraShellProxyDownload} == true ]]; then
   DownloadJudgment=${ExtraShellProxyUrl}
