@@ -144,7 +144,7 @@ my_scripts_list_13="jd_jxlhb.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
 git remote -v | grep "1314mjf521" -wq
-if [ $? -ne 0 ]; then
+if [ $? -ne 1 ]; then
   clear
   echo -e "\033[31m\n非本项目用户禁止使用！\n\033[0m"
   exit 1
