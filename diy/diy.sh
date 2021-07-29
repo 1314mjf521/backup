@@ -89,9 +89,9 @@ PROXY_URL=https://ghproxy.com/
 
 ExtraShellProxyUrl=https://ghproxy.com/
 if [[ ${EnableExtraShellProxyDownload} == true ]]; then
-  DownloadJudgment=${PROXY_URL}
+  PROXY_URL=${PROXY_URL}
 else
-  DownloadJudgment=
+  PROXY_URL=
 fi
 
 ##############################  作  者  昵  称  &  脚  本  地  址  &  脚  本  名  称  （必填）  ##############################
@@ -220,8 +220,8 @@ grep -q "jddj_cookie" ${ListCron} && sed -i '/&*jddj_cookie/c#29 9 * * * bash jd
 grep -q "jd_qqxing" ${ListCron} && sed -i '/&*jd_qqxing/c1 0-23/2 * * * bash jd jd_qqxing' ${ListCron}
 
 ## 验证组件
-[ -f ${ScriptsDir}/sign_graphics_validate.js ] || wget -q ${DownloadJudgment}https://raw.githubusercontent.com/smiek2221/scripts/master/sign_graphics_validate.js -O ${ScriptsDir}/sign_graphics_validate.js
-[ -f ${ScriptsDir}/JDJRValidator_Pure.js ] || wget -q ${DownloadJudgment}https://raw.githubusercontent.com/smiek2221/scripts/master/JDJRValidator_Pure.js -O ${ScriptsDir}/JDJRValidator_Pure.js
+[ -f ${ScriptsDir}/sign_graphics_validate.js ] || wget -q ${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/sign_graphics_validate.js -O ${ScriptsDir}/sign_graphics_validate.js
+[ -f ${ScriptsDir}/JDJRValidator_Pure.js ] || wget -q ${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/JDJRValidator_Pure.js -O ${ScriptsDir}/JDJRValidator_Pure.js
 
 ## 删除不知如何产生的垃圾文件
 DeletedCacheFiles="app.eb41fc5f.js"
