@@ -147,7 +147,7 @@ my_scripts_list_13="jd_jxlhb.js"
 
 scripts_base_url_14=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
 
-my_scripts_list_14="jd_cfd.js"
+my_scripts_list_14="jd_cfd.js jd_cleancart.js"
 
 
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
