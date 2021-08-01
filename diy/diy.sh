@@ -100,7 +100,7 @@ PROXY_URL=https://ghproxy.com/
 
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
 
-author_list="Public passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv"
+author_list="Public passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv 1a1"
 
 ## Public
 scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
@@ -151,6 +151,8 @@ my_scripts_list_11="jd_summer_movement_bet.js jd_summer_movement_red.js"
 scripts_base_url_12=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
 my_scripts_list_12="jd_jxlhb.js"
 
+scripts_base_url_13=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
+my_scripts_list_13="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
 git remote -v | grep "supermanito" -wq
