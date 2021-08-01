@@ -209,9 +209,9 @@ for author in $author_list; do
       if [ -z "${script_date}" ]; then
         cron_min=$(rand 1 59)
         cron_hour=$(rand 7 9)
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash /opt/jd/jd.sh $croname" ${ListCron}
       else
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash /opt/jd/jd.sh $croname" ${ListCron}
       fi
     else
       [ -f ${ScriptsDir}/$name.new ] && rm -f ${ScriptsDir}/$name.new
@@ -223,8 +223,8 @@ done
 
 ##############################  自  定  义  命  令  ##############################
 ## 修正定时
-grep -q "jddj_cookie" ${ListCron} && sed -i '/&*jddj_cookie/c#29 9 * * * bash jd jddj_cookie' ${ListCron}
-grep -q "jd_qqxing" ${ListCron} && sed -i '/&*jd_qqxing/c1 0-23/2 * * * bash jd jd_qqxing' ${ListCron}
+grep -q "jddj_cookie" ${ListCron} && sed -i '/&*jddj_cookie/c#29 9 * * * bash /opt/jd/jd.sh jddj_cookie' ${ListCron}
+grep -q "jd_qqxing" ${ListCron} && sed -i '/&*jd_qqxing/c1 0-23/2 * * * bash /opt/jd/jd.sh jd_qqxing' ${ListCron}
 
 ## 验证组件
 [ -f ${ScriptsDir}/sign_graphics_validate.js ] || wget -q ${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/sign_graphics_validate.js -O ${ScriptsDir}/sign_graphics_validate.js
