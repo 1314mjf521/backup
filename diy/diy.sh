@@ -154,7 +154,7 @@ my_scripts_list_12="jd_jxlhb.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
 git remote -v | grep "supermanito" -wq
-[ $? -ne 0 ] && clear && echo -e "\033[31m\n非本项目用户禁止使用！\n\033[0m" && exit 1
+[ $? -ne 1 ] && clear && echo -e "\033[31m\n非本项目用户禁止使用！\n\033[0m" && exit 1
 rand() {
   min=$1
   max=$(($2 - $min + 1))
