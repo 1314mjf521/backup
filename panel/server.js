@@ -57,7 +57,7 @@ function praseSetCookies(response) {
     lstoken = response.headers['set-cookie'][3]
     lstoken = lstoken.substring(lstoken.indexOf("=") + 1, lstoken.indexOf(";"))
     cookies = "guid=" + guid + "; lang=chs; lsid=" + lsid + "; lstoken=" + lstoken + "; "
-    this.ua = ua;
+    ua = ua;
 }
 
 function getCookie(response) {
@@ -92,7 +92,7 @@ async function step1() {
         lstoken,
         okl_token,
         token = ""
-        this.ua = this.ua || process.env.NINJA_UA || GET_RANDOM_TIME_UA();
+        ua = ua || process.env.NINJA_UA || GET_RANDOM_TIME_UA();
         let timeStamp = (new Date()).getTime()
         let url = 'https://plogin.m.jd.com/cgi-bin/mm/new_login_entrance?lang=chs&appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport'
         const response = await got(url, {
@@ -103,7 +103,7 @@ async function step1() {
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Language': 'zh-cn',
                 'Referer': 'https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport',
-                'User-Agent':  this.ua,
+                'User-Agent':  ua,
                 'Host': 'plogin.m.jd.com'
             }
         });
@@ -137,7 +137,7 @@ async function step2() {
                 'Accept': 'application/json, text/plain, */*',
                 'Cookie': cookies,
                 'Referer': 'https://plogin.m.jd.com/login/login?appid=300&returnurl=https://wqlogin2.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=//home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport',
-                'User-Agent': this.ua,
+                'User-Agent': ua,
                 'Host': 'plogin.m.jd.com',
             }
         });
@@ -175,7 +175,7 @@ async function checkLogin() {
                 'Connection': 'Keep-Alive',
                 'Content-Type': 'application/x-www-form-urlencoded; Charset=UTF-8',
                 'Accept': 'application/json, text/plain, */*',
-                'User-Agent':  this.ua,
+                'User-Agent':  ua,
             }
         });
 
