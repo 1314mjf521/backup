@@ -57,7 +57,7 @@ function praseSetCookies(response) {
     lstoken = response.headers['set-cookie'][3]
     lstoken = lstoken.substring(lstoken.indexOf("=") + 1, lstoken.indexOf(";"))
     cookies = "guid=" + guid + "; lang=chs; lsid=" + lsid + "; lstoken=" + lstoken + "; "
-    ua = ua;
+    ua = ua
 }
 
 function getCookie(response) {
@@ -92,7 +92,7 @@ async function step1() {
         lstoken,
         okl_token,
         token = ""
-        ua = ua || process.env.NINJA_UA || GET_RANDOM_TIME_UA();
+        ua = ua  || GET_RANDOM_TIME_UA();
         let timeStamp = (new Date()).getTime()
         let url = 'https://plogin.m.jd.com/cgi-bin/mm/new_login_entrance?lang=chs&appid=300&returnurl=https://wq.jd.com/passport/LoginRedirect?state=' + timeStamp + '&returnurl=https://home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&/myJd/home.action&source=wq_passport'
         const response = await got(url, {
