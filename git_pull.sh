@@ -108,6 +108,11 @@ wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download
  npm install -g npm
  npm i png-js
  pip3 install requests
+ npm install axios date-fns
+ npm install -g typescript
+
+
+
  
 ## 把config.sh中提供的所有账户的PIN附加在jd_joy_run.js中，让各账户相互进行宠汪汪赛跑助力
 function Change_JoyRunPins() {
