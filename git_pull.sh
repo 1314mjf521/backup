@@ -77,6 +77,7 @@ function Git_CloneScripts() {
   git clone -b master ${ScriptsURL} ${ScriptsDir}
   ExitStatusScripts=$?
   echo
+
 }
 
 ## 更新scripts
@@ -86,6 +87,7 @@ function Git_PullScripts() {
   git fetch --all
   ExitStatusScripts=$?
   git reset --hard origin/master
+    rm -rf package-lock.json
   echo
 }
 
