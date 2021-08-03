@@ -87,7 +87,7 @@ function Git_PullScripts() {
   git fetch --all
   ExitStatusScripts=$?
   git reset --hard origin/master
-    rm -rf package-lock.json
+ 
   echo
 }
 
@@ -105,6 +105,7 @@ function Count_UserSum() {
 
 ## 更新多合一签到及宠汪汪脚本修复
 cd ${ScriptsDir}
+
 wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
  npm install png-js
  npm install -g npm
@@ -228,6 +229,7 @@ function Npm_InstallSub() {
 ## npm install
 function Npm_Install() {
   cd ${ScriptsDir}
+  rm -rf package-lock.json
   if [[ "${PackageListOld}" != "$(cat package.json)" ]]; then
     echo -e "检测到package.json有变化，运行 npm install...\n"
     Npm_InstallSub
