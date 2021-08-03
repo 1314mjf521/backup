@@ -213,7 +213,7 @@ function ProjectDeployment() {
     npm config set registry http://registry.npm.taobao.org
     ## 安装控制面板功能
     cp $BASE/sample/auth.json $BASE/config/auth.json
-    cd $BASE/panel
+    cd  /opt/jd/panel
     npm install || npm install --registry=https://registry.npm.taobao.org
     npm install -g pm2
     pm2 start ecosystem.config.js
@@ -230,6 +230,7 @@ function ProjectDeployment() {
     echo "export JD_DIR=$BASE" >>/etc/profile
     source /etc/profile
 }
+
 
 ## 更改配置文件：
 function SetConfig() {
