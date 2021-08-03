@@ -111,7 +111,7 @@ cd ${ScriptsDir}
     npm install -g npm
     npm i -S png-js
     pip3 install requests
-    npm install canvas png-js date-fns axios crypto-js tslib ts-md5 @types/node --build-from-source
+    npm install canvas png-js date-fns axios crypto-js tslib ts-md5 
     
 
  
