@@ -78,8 +78,7 @@
 ## 提交互助码到公共库（每天早上 7 点）
 # https://t.me/passerbybbot
 
-##############################  定  义  下  载  代  理  （内置功能）  ##############################
-[[ ${EnableExtraShellProxyDownload} == true ]] && PROXY_URL=${ExtraShellProxyUrl} || PROXY_URL=""
+
 
 ##############################  作  者  昵  称  &  脚  本  地  址  &  脚  本  名  称  （必填）  ##############################
 
@@ -97,14 +96,13 @@ PROXY_URL=https://ghproxy.com/
 
 
 
-
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
 
-author_list="Public passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv 1a1"
+author_list="Public passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv shufflewzc SSS"
 
 ## Public
 scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
-my_scripts_list_1="jd_DrawEntrance.js"
+my_scripts_list_1="jd_DrawEntrance.js jd_shop_sign.js jd_superBrand.js"
 
 ## 京东到家
 scripts_base_url_2=${PROXY_URL}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
@@ -129,7 +127,7 @@ my_scripts_list_6="jx_mc_coin.js jx_mc_emptycabbage.js"
 
 ## curtinlv
 scripts_base_url_7=${PROXY_URL}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
-my_scripts_list_7="jd_cashHelp.py jd_jxgc_tuan.py jd_qjd.py"
+my_scripts_list_7="jd_cashHelp.py jd_jxgc_tuan.py"
 
 ## cdle
 scripts_base_url_8=${PROXY_URL}https://raw.githubusercontent.com/cdle/jd_study/main/
@@ -137,11 +135,11 @@ my_scripts_list_8="jd_joy_park_help.js jd_morningSc.js jd_earn30.js"
 
 ## smiek2221
 scripts_base_url_9=${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/
-my_scripts_list_9="jd_sign_graphics.js jd_joy_steal.js gua_wealth_island.js jd_summer_movement.js jd_summer_movement_help.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js"
+my_scripts_list_9="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js jd_joy_steal.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js"
 
 ## jiulan
 scripts_base_url_10=${PROXY_URL}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
-my_scripts_list_10="jd_shop_sign.js jd_joypark_task.js"
+my_scripts_list_10="jd_joypark_task.js"
 
 ## star261
 scripts_base_url_11=${PROXY_URL}https://raw.githubusercontent.com/star261/jd/main/scripts/
@@ -151,8 +149,13 @@ my_scripts_list_11="jd_summer_movement_bet.js jd_summer_movement_red.js"
 scripts_base_url_12=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
 my_scripts_list_12="jd_jxlhb.js"
 
-scripts_base_url_13=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
-my_scripts_list_13="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
+## shufflewzc
+scripts_base_url_13=${PROXY_URL}https://raw.githubusercontent.com/shufflewzc/faker2/main/
+my_scripts_list_13="jd_try.js"
+
+
+scripts_base_url_14=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
+my_scripts_list_14="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
 git remote -v | grep "supermanito" -wq
