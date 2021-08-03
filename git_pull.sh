@@ -229,8 +229,9 @@ function Npm_InstallSub() {
 ## npm install
 function Npm_Install() {
   cd ${ScriptsDir}
-  rm -rf package-lock.json
+  
   if [[ "${PackageListOld}" != "$(cat package.json)" ]]; then
+    rm -rf  package-lock.json
     echo -e "检测到package.json有变化，运行 npm install...\n"
     Npm_InstallSub
     if [ $? -ne 0 ]; then
@@ -242,6 +243,7 @@ function Npm_Install() {
 
   if [ ! -d ${ScriptsDir}/node_modules ]; then
     echo -e "运行 npm install...\n"
+
     Npm_InstallSub
     if [ $? -ne 0 ]; then
       echo -e "\nnpm install 运行不成功，自动删除 ${ScriptsDir}/node_modules...\n"
