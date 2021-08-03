@@ -107,13 +107,7 @@ function Count_UserSum() {
 cd ${ScriptsDir}
 
 wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
- rm -rf package-lock.json
 
- npm install -g npm
- # npm i png-js
- pip3 install requests
- npm install axios date-fns
- npm install -g typescript
 
 
 
