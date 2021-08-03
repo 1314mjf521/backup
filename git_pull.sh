@@ -106,9 +106,11 @@ function Count_UserSum() {
 ## 更新多合一签到及宠汪汪脚本修复
 cd ${ScriptsDir}
 
-wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
+    wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
 
-
+    npm install -g npm
+    pip3 install requests
+    npm install canvas png-js date-fns axios crypto-js tslib ts-md5
 
 
  
