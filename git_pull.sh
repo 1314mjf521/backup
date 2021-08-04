@@ -107,11 +107,11 @@ function Count_UserSum() {
 cd ${ScriptsDir}
 
     wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
-
-    npm install -g npm
-    npm i -S png-js
-    pip3 install requests
-    npm install canvas png-js date-fns axios crypto-js tslib ts-md5 
+## 宠汪汪等依赖文件
+    ## npm install -g npm
+    ## npm i -S png-js
+    ## pip3 install requests
+    ## npm install canvas png-js date-fns axios crypto-js tslib ts-md5 
     
 
  
