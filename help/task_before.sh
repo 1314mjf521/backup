@@ -1,107 +1,45 @@
 #!/usr/bin/env bash
 
-# Build 20210722-001
+# Build 20210805-001
 
-## 东东农场：
-MyFruit1=''
-
-ForOtherFruit1=""
-
-
-## 东东萌宠：
-MyPet1=''
-
-ForOtherPet1=""
-
-
-## 种豆得豆：
-MyBean1=''
-
-ForOtherBean1=""
-
-
-## 京喜工厂：
-MyDreamFactory1=''
-
-ForOtherDreamFactory1=""
-
-
-## 东东工厂：
-MyJdFactory1=''
-
-ForOtherJdFactory1=""
-
-
-## 疯狂的JOY：
-MyJoy1=''
-
-ForOtherJoy1=""
-
-
-## 京东赚赚：
-MyJdzz1=''
-
-ForOtherJdzz1=""
-
-
-## 京喜农场：
-MyJxnc1=''
-
-ForOtherJxnc1=""
-
-
-## 口袋书店：
-MyBookShop1=''
-
-ForOtherBookShop1=""
-
-
-## 签到领现金：
-MyCash1=''
-
-ForOtherCash1=""
-
-
-## 闪购盲盒：
-MySgmh1=''
-
-ForOtherSgmh1=""
-
-
-## 京喜财富岛：
-MyCfd1=''
-
-ForOtherCfd1=""
-
-
-## 东东健康社区：
-MyHealth1=''
-
-ForOtherHealth1=""
-
-
-## 京东手机狂欢城：
-MyCarni1=''
-
-ForOtherCarni1=""
-
-
-## 城城领现金：
-MyCity1=''
-
-ForOtherCity1=""
-
-
-## 摇钱树：
-MyMoneyTree1=''
-
-ForOtherMoneyTree1=""
-
-
-## 京喜Token(用于京喜财富岛提现等)
-TokenJxnc1=''
-
-
+name_js=(
+  jd_fruit
+  jd_pet
+  jd_plantBean
+  jd_dreamFactory
+  jd_jdfactory
+  jd_crazy_joy
+  jd_jdzz
+  jd_jxnc
+  jd_bookshop
+  jd_cash
+  jd_sgmh
+  jd_cfd
+  jd_health
+  jd_carnivalcity
+  jd_city
+  jd_moneyTree_heip
+  jd_cfdtx
+)
+name_config=(
+  Fruit
+  Pet
+  Bean
+  DreamFactory
+  JdFactory
+  Joy
+  Jdzz
+  Jxnc
+  BookShop
+  Cash
+  Sgmh
+  Cfd
+  Health
+  Carni
+  City
+  MoneyTree
+  TokenJxnc
+)
 env_name=(
   FRUITSHARECODES                     ## 1、东东农场互助码
   PETSHARECODES                       ## 2、东东萌宠互助码
@@ -141,38 +79,59 @@ var_name=(
   TokenJxnc                           ## 17、京喜Token(京喜财富岛提现用)
 )
 
+## 临时屏蔽某账号运行活动脚本
+TempBlock_JD_COOKIE(){
+    source $file_env
+    local TempBlockCookieInterval="$(echo $TempBlockCookie | perl -pe "{s|~|-|; s|_|-|}" | sed 's/\(\d\+\)-\(\d\+\)/{\1..\2}/g')"
+    local TempBlockCookieArray=($(eval echo $TempBlockCookieInterval))
+    local envs=$(eval echo "\$JD_COOKIE")
+    local array=($(echo $envs | sed 's/&/ /g'))
+    local user_sum=${#array[*]}
+    local m n t
+    for ((m = 1; m <= $user_sum; m++)); do
+        n=$((m - 1))
+        for ((t = 0; t < ${#TempBlockCookieArray[*]}; t++)); do
+            [[ "${TempBlockCookieArray[t]}" = "$m" ]] && unset array[n]
+        done
+    done
+    jdCookie=$(echo ${array[*]} | sed 's/\ /\&/g')
+    [[ ! -z $jdCookie ]] && export JD_COOKIE="$jdCookie"
+    temp_user_sum=${#array[*]}
+}
+
+## 组合互助码格式化为全局变量的函数
 combine_sub() {
     source $file_env
     local what_combine=$1
     local combined_all=""
     local tmp1 tmp2
-    local TempBlockCookieArray=($(echo $TempBlockCookie))
+    local TempBlockCookieInterval="$(echo $TempBlockCookie | perl -pe "{s|~|-|; s|_|-|}" | sed 's/\(\d\+\)-\(\d\+\)/{\1..\2}/g')"
+    local TempBlockCookieArray=($(eval echo $TempBlockCookieInterval))
     local envs=$(eval echo "\$JD_COOKIE")
     local array=($(echo $envs | sed 's/&/ /g'))
     local user_sum=${#array[*]}
-    local a b c i j sum
-    for ((j=1; j <= $user_sum; j++)); do
-        local tmp1=$what_combine$j
+    local a b i j t sum
+    for ((i=1; i <= $user_sum; i++)); do
+        local tmp1=$what_combine$i
         local tmp2=${!tmp1}
-        [[ ${tmp2} ]] && sum=$j || break
+        [[ ${tmp2} ]] && sum=$i || break
     done
-    for ((i = 1; i <= $user_sum; i++)); do
+    for ((j = 1; j <= $sum; j++)); do
         a=$temp_user_sum
-        b=${#TempBlockCookieArray[*]}
-        c=$sum
-        if [[ $a -ne $c ]]; then
-            for num in ${TempBlockCookie}; do
-                [[ $i -eq $num ]] && continue 2
+        b=$sum
+        if [[ $a -ne $b ]]; then
+            for ((t = 0; t < ${#TempBlockCookieArray[*]}; t++)); do
+                [[ "${TempBlockCookieArray[t]}" = "$j" ]] && continue 2
             done
         fi
-        local tmp1=$what_combine$i
+        local tmp1=$what_combine$j
         local tmp2=${!tmp1}
         combined_all="$combined_all&$tmp2"
     done
     echo $combined_all | perl -pe "{s|^&||; s|^@+||; s|&@|&|g; s|@+&|&|g; s|@+|@|g; s|@+$||}"
 }
 
-## 正常依次运行时，组合所有账号的Cookie与互助码
+## 正常依次运行时，组合互助码格式化为全局变量
 combine_all() {
     for ((i = 0; i < ${#env_name[*]}; i++)); do
         result=$(combine_sub ${var_name[i]})
@@ -182,23 +141,29 @@ combine_all() {
     done
 }
 
-## 临时屏蔽某账号运行活动脚本
-TempBlock_JD_COOKIE(){
-    source $file_env
-    local envs=$(eval echo "\$JD_COOKIE")
-    local array=($(echo $envs | sed 's/&/ /g'))
-    for num in ${TempBlockCookie}; do
-        unset array[$(($num-1))]
-    done
-    jdCookie=$(echo ${array[*]} | sed 's/\ /\&/g')
-    [[ ! -z $jdCookie ]] && export JD_COOKIE="$jdCookie"
-    temp_user_sum=${#array[*]}
-}
+for ((i = 0; i < ${#env_name[*]}; i++)); do
+    export ${env_name[i]}=""
+done
 
 TempBlock_JD_COOKIE
 
 #if [[ $(ls $dir_code) ]]; then
 #    latest_log=$(ls -r $dir_code | head -1)
 #    . $dir_code/$latest_log
-    combine_all
+#    combine_all
 #fi
+
+for ((i = 0; i < ${#env_name[*]}; i++)); do
+    case $1 in
+        *${name_js[i]}.js | *${name_js[i]}.ts)
+            . $dir_log/.ShareCode/${name_config[i]}.log
+            result=$(combine_sub ${var_name[i]})
+            if [[ $result ]]; then
+                export ${env_name[i]}=$result
+            fi
+            ;;
+        *)
+            export ${env_name[i]}=""
+            ;;
+    esac
+done
