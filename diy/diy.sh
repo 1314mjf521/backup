@@ -154,8 +154,7 @@ scripts_base_url_12=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
 my_scripts_list_12="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
-git remote -v | grep "supermanito" -wq
-[ $? -ne 1 ] && clear && echo -e "\033[31m\n非本项目用户禁止使用！\n\033[0m" && exit 1
+
 rand() {
   min=$1
   max=$(($2 - $min + 1))
@@ -206,19 +205,15 @@ for author in $author_list; do
       elif [[ $name == "jd_qjd.py" ]]; then
         script_date="1 0 * * *" # 指定抢京豆脚本定时
       else
-        if [[ ${script_date_standard} == "" ]]; then
-          script_date=$(cat ${ScriptsDir}/$name | grep "cron" | head -n 1 | sed "s/[a-zA-Z]//g" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5; else if ($1~/^[*]/) print $2,$3,$4,$5,$6}')
-        else
-          script_date=${script_date_standard}
-        fi
+        script_date=$(cat ${ScriptsDir}/$name | grep "cron" | head -n 1 | sed "s/[a-zA-Z]//g" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5; else if ($1~/^[*]/) print $2,$3,$4,$5,$6}')
       fi
 
       if [ -z "${script_date}" ]; then
         cron_min=$(rand 1 59)
         cron_hour=$(rand 7 9)
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hang up/a${cron_min} ${cron_hour} * * * bash ${ShellJd} $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash ${ShellJd}  $croname" ${ListCron}
       else
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hang up/a${script_date} bash ${ShellJd} $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash  ${ShellJd}  $croname" ${ListCron}
       fi
     else
       [ -f ${ScriptsDir}/$name.new ] && rm -f ${ScriptsDir}/$name.new
