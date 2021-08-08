@@ -96,16 +96,19 @@ PROXY_URL=https://ghproxy.com/
 
 
 
+
+
+
 ## 免责声明：当作者的脚本不可拉取时，会临时启用别人 FORK 或搬运的库代替
 
-author_list="Public passerby-b LongZhuZhu Wenmoux panghu MoPoQAQ curtinlv cdle smiek2221 jiulan star261 Aaron-lv shufflewzc SSS"
+author_list="Public passerby-b LongZhuZhu Wenmoux curtinlv cdle smiek2221 jiulan star261 Aaron-lv Faker SSS"
 
 ## Public
 scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
-my_scripts_list_1="jd_DrawEntrance.js jd_shop_sign.js jd_superBrand.js"
+my_scripts_list_1="jd_shop_sign.js jd_superBrand.js"
 
 ## 京东到家
-scripts_base_url_2=${PROXY_URL}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
+scripts_base_url_2=${ProxyJudge}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
 my_scripts_list_2="jddj_fruit.js jddj_fruit_collectWater.js jddj_bean.js jddj_plantBeans.js jddj_getPoints.js jddj_cookie.js"
 
 ## 龙王
@@ -114,48 +117,41 @@ scripts_base_url_3=https://gitee.com/SuperManito/scripts/raw/master/
 my_scripts_list_3="long_super_redrain.js long_half_redrain.js"
 
 ## Wenmoux
-scripts_base_url_4=${PROXY_URL}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
-my_scripts_list_4="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js jd_wxFans.js jd_mb.js"
+scripts_base_url_4=${ProxyJudge}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
+my_scripts_list_4="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js jd_mb.js"
 
-## panghu/柠檬
-scripts_base_url_5=https://gitee.com/SuperManito/scripts/raw/master/
-my_scripts_list_5="jd_wsdlb.js jd_chinajoy.js"
-
-## moposmall
-scripts_base_url_6=${PROXY_URL}https://raw.githubusercontent.com/moposmall/Script/main/Me/
-my_scripts_list_6="jx_mc_coin.js jx_mc_emptycabbage.js"
 
 ## curtinlv
-scripts_base_url_7=${PROXY_URL}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
-my_scripts_list_7="jd_cashHelp.py jd_jxgc_tuan.py"
+scripts_base_url_5=${ProxyJudge}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
+my_scripts_list_5="jd_cashHelp.py jd_jxgc_tuan.py jd_qjd.py"
 
 ## cdle
-scripts_base_url_8=${PROXY_URL}https://raw.githubusercontent.com/cdle/jd_study/main/
-my_scripts_list_8="jd_joy_park_help.js jd_morningSc.js jd_earn30.js"
+scripts_base_url_6=${ProxyJudge}https://raw.githubusercontent.com/cdle/jd_study/main/
+my_scripts_list_6="jd_joy_park_help.js jd_morningSc.js jd_earn30.js"
 
 ## smiek2221
-scripts_base_url_9=${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/
-my_scripts_list_9="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js jd_joy_steal.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js"
+scripts_base_url_7=${ProxyJudge}https://raw.githubusercontent.com/smiek2221/scripts/master/
+my_scripts_list_7="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js jd_joy_steal.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js gua_doge.js"
 
 ## jiulan
-scripts_base_url_10=${PROXY_URL}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
-my_scripts_list_10="jd_joypark_task.js"
+scripts_base_url_8=${ProxyJudge}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
+my_scripts_list_8="jd_wxFans.js"
 
 ## star261
-scripts_base_url_11=${PROXY_URL}https://raw.githubusercontent.com/star261/jd/main/scripts/
-my_scripts_list_11="jd_summer_movement_bet.js jd_summer_movement_red.js"
+scripts_base_url_9=${ProxyJudge}https://raw.githubusercontent.com/star261/jd/main/scripts/
+my_scripts_list_9="jd_summer_movement_bet.js"
 
 ## Aaron-lv
-scripts_base_url_12=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
-my_scripts_list_12="jd_jxlhb.js"
+scripts_base_url_10=${ProxyJudge}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
+my_scripts_list_10="jd_jxlhb.js jd_nzmh.js"
 
 ## shufflewzc
-scripts_base_url_13=${PROXY_URL}https://raw.githubusercontent.com/shufflewzc/faker2/main/
-my_scripts_list_13="jd_try.js"
+scripts_base_url_11=${ProxyJudge}https://raw.githubusercontent.com/shufflewzc/faker2/main/
+my_scripts_list_11="jd_try.js jd_DrawEntrance.js jd_moneyTree_heip.js"
 
 
-scripts_base_url_14=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
-my_scripts_list_14="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
+scripts_base_url_12=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
+my_scripts_list_12="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
 git remote -v | grep "supermanito" -wq
@@ -167,28 +163,52 @@ rand() {
   echo $(($num % $max + $min))
 }
 index=1
+echo -e "\033[33m[*]\033[0m 执行自定义脚本🔔"
 for author in $author_list; do
-  echo -e "\033[33m[*]\033[0m 开始下载 $author 的活动脚本：\n"
   eval scripts_list=\$my_scripts_list_${index}
   eval url_list=\$scripts_base_url_${index}
+
+  ## 判断脚本来源仓库
+  format_url=$(echo $url_list | awk -F '.com' '{print$NF}' | sed 's/.$//')
+  if [[ $(echo $url_list | egrep -o "github|gitee") == "github" ]]; then
+    repository_platform="https://github.com"
+    repository_branch=$(echo $format_url | awk -F '/' '{print$4}')
+    reformat_url=$(echo $format_url | sed "s|$repository_branch|tree/$repository_branch|g")
+    if [[ ${EnableExtraShellProxyDownload} == true ]]; then
+      DownloadJudgment="使用代理"
+    else
+      DownloadJudgment=""
+    fi
+  elif [[ $(echo $url_list | egrep -o "github|gitee") == "gitee" ]]; then
+    repository_platform="https://gitee.com"
+    reformat_url=$(echo $format_url | sed "s|/raw/|/tree/|g")
+    DownloadJudgment=""
+  fi
+  repository_url=$(echo "$repository_platform$reformat_url")
+  echo -e "\n\033[33m[*]\033[0m ${DownloadJudgment}更新 $author 的活动脚本:"
+  echo -e "$repository_url\n"
+
   for js in $scripts_list; do
     eval url=$url_list$js
-    echo $url
     eval name=$js
     wget -q --no-check-certificate $url -O ${ScriptsDir}/$name.new
     if [ $? -eq 0 ]; then
       mv -f ${ScriptsDir}/$name.new ${ScriptsDir}/$name
-      echo -e "\033[32m[Done]\033[0m $name 更新完成\n"
+      echo -e "\033[32m[Done]\033[0m $name"
+
+      [[ $name == "jddj_cookie.js" ]] && continue
+      [[ $name == "sign_graphics_validate.js" ]] && continue
+      [[ $name == "JDJRValidator_Pure.js" ]] && continue
+      [[ $name == "ZooFaker_Necklace.js" ]] && continue
+
       croname=$(echo "$name" | awk -F\. '{print $1}')
       script_date_standard=$(cat ${ScriptsDir}/$name | grep "https" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}' | sort | uniq | head -n 1)
-      [[ $name == "jddj_cookie.js" ]] && continue
-      [[ $name == "ZooFaker_Necklace.js" ]] && continue
       if [[ $name == "jd_cashHelp.py" ]]; then
-        script_date="8 */4 * * *" #指定签到领现金脚本定时
+        script_date="8 */4 * * *" # 指定签到领现金脚本定时
       elif [[ $name == "jd_jxgc_tuan.py" ]]; then
-        script_date="30 8 * * *" #指定京喜工厂开团脚本定时
+        script_date="0 0,7,10 * * *" # 指定京喜工厂开团脚本定时
       elif [[ $name == "jd_qjd.py" ]]; then
-        script_date="1 0 * * *" #指定抢京豆脚本定时
+        script_date="1 0 * * *" # 指定抢京豆脚本定时
       else
         if [[ ${script_date_standard} == "" ]]; then
           script_date=$(cat ${ScriptsDir}/$name | grep "cron" | head -n 1 | sed "s/[a-zA-Z]//g" | awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5; else if ($1~/^[*]/) print $2,$3,$4,$5,$6}')
@@ -200,22 +220,19 @@ for author in $author_list; do
       if [ -z "${script_date}" ]; then
         cron_min=$(rand 1 59)
         cron_hour=$(rand 7 9)
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash /opt/jd/ $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hang up/a${cron_min} ${cron_hour} * * * bash jd $croname" ${ListCron}
       else
-        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hangup/a${script_date} bash /opt/jd/ $croname" ${ListCron}
+        [ $(grep -c "$croname" ${ListCron}) -eq 0 ] && sed -i "/hang up/a${script_date} bash jd $croname" ${ListCron}
       fi
     else
       [ -f ${ScriptsDir}/$name.new ] && rm -f ${ScriptsDir}/$name.new
       echo -e "\033[31m[ERROR]\033[0m $name 更新失败，使用上一次正常的版本\n"
     fi
   done
+  echo ''
   index=$(($index + 1))
 done
-
 ##############################  自  定  义  命  令  ##############################
-## 导入图形验证相关组件
-[ -f ${ScriptsDir}/sign_graphics_validate.js ] || wget -q ${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/sign_graphics_validate.js -O ${ScriptsDir}/sign_graphics_validate.js
-[ -f ${ScriptsDir}/JDJRValidator_Pure.js ] || wget -q ${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/JDJRValidator_Pure.js -O ${ScriptsDir}/JDJRValidator_Pure.js
 
 ## 删除不知如何产生的垃圾文件
 DeletedCacheFiles=""
@@ -224,13 +241,14 @@ for del in ${DeletedCacheFiles}; do
 done
 
 ## 删除脚本
-DeletedScripts="jd_productZ4Brand.js jd_pk.js jd_try.js jd_sendBeans.js"
+DeletedScripts="jd_joypark_task.js jd_summer_movement_red.js jd_wsdlb.js"
 for del1 in ${DeletedScripts}; do
   [ -f ${ScriptsDir}/$del1 ] && rm -rf ${ScriptsDir}/$del1
 done
 
 ## 删除定时
-DeletedCronTask="jd_productZ4Brand.js jd_pk jd_try jd_sendBeans"
+DeletedCronTask="jd_joypark_task jd_summer_movement_red jd_wsdlb"
 for del2 in ${DeletedCronTask}; do
   grep -q "$del2" ${ListCron} && sed -i "/$del2/d" ${ListCron}
 done
+echo -e "\033[32m[Done]\033[0m 结束🔔\n"
