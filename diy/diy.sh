@@ -95,7 +95,7 @@ fi
 PROXY_URL=https://ghproxy.com/
 
 
-
+echo  "${ShellJd}  & ${ListCron} "
 
 
 
@@ -174,11 +174,7 @@ for author in $author_list; do
     repository_platform="https://github.com"
     repository_branch=$(echo $format_url | awk -F '/' '{print$4}')
     reformat_url=$(echo $format_url | sed "s|$repository_branch|tree/$repository_branch|g")
-    if [[ ${EnableExtraShellProxyDownload} == true ]]; then
-      DownloadJudgment="使用代理"
-    else
-      DownloadJudgment=""
-    fi
+
   elif [[ $(echo $url_list | egrep -o "github|gitee") == "gitee" ]]; then
     repository_platform="https://gitee.com"
     reformat_url=$(echo $format_url | sed "s|/raw/|/tree/|g")
