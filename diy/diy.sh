@@ -108,7 +108,7 @@ scripts_base_url_1=https://gitee.com/SuperManito/scripts/raw/master/
 my_scripts_list_1="jd_shop_sign.js jd_superBrand.js"
 
 ## 京东到家
-scripts_base_url_2=${ProxyJudge}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
+scripts_base_url_2=${PROXY_URL}https://raw.githubusercontent.com/passerby-b/JDDJ/main/
 my_scripts_list_2="jddj_fruit.js jddj_fruit_collectWater.js jddj_bean.js jddj_plantBeans.js jddj_getPoints.js jddj_cookie.js"
 
 ## 龙王
@@ -117,36 +117,36 @@ scripts_base_url_3=https://gitee.com/SuperManito/scripts/raw/master/
 my_scripts_list_3="long_super_redrain.js long_half_redrain.js"
 
 ## Wenmoux
-scripts_base_url_4=${ProxyJudge}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
+scripts_base_url_4=${PROXY_URL}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
 my_scripts_list_4="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js jd_mb.js"
 
 
 ## curtinlv
-scripts_base_url_5=${ProxyJudge}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
+scripts_base_url_5=${PROXY_URL}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
 my_scripts_list_5="jd_cashHelp.py jd_jxgc_tuan.py jd_qjd.py"
 
 ## cdle
-scripts_base_url_6=${ProxyJudge}https://raw.githubusercontent.com/cdle/jd_study/main/
+scripts_base_url_6=${PROXY_URL}https://raw.githubusercontent.com/cdle/jd_study/main/
 my_scripts_list_6="jd_joy_park_help.js jd_morningSc.js jd_earn30.js"
 
 ## smiek2221
-scripts_base_url_7=${ProxyJudge}https://raw.githubusercontent.com/smiek2221/scripts/master/
+scripts_base_url_7=${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/
 my_scripts_list_7="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js jd_joy_steal.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js gua_doge.js"
 
 ## jiulan
-scripts_base_url_8=${ProxyJudge}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
+scripts_base_url_8=${PROXY_URL}https://raw.githubusercontent.com/jiulan/platypus/main/scripts/
 my_scripts_list_8="jd_wxFans.js"
 
 ## star261
-scripts_base_url_9=${ProxyJudge}https://raw.githubusercontent.com/star261/jd/main/scripts/
+scripts_base_url_9=${PROXY_URL}https://raw.githubusercontent.com/star261/jd/main/scripts/
 my_scripts_list_9="jd_summer_movement_bet.js"
 
 ## Aaron-lv
-scripts_base_url_10=${ProxyJudge}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
+scripts_base_url_10=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
 my_scripts_list_10="jd_jxlhb.js jd_nzmh.js"
 
 ## shufflewzc
-scripts_base_url_11=${ProxyJudge}https://raw.githubusercontent.com/shufflewzc/faker2/main/
+scripts_base_url_11=${PROXY_URL}https://raw.githubusercontent.com/shufflewzc/faker2/main/
 my_scripts_list_11="jd_try.js jd_DrawEntrance.js jd_moneyTree_heip.js"
 
 
