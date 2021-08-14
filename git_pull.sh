@@ -106,7 +106,7 @@ function Count_UserSum() {
 ## 更新多合一签到及宠汪汪脚本修复
 cd ${ScriptsDir}
 
-    wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip utils.zip
+    wget  https://ghproxy.com/https://github.com/shufflewzc/faker2/releases/download/0.0.1/utils.zip && unzip -o utils.zip
 ## 宠汪汪等依赖文件
     ## npm install -g npm
     ## npm i -S png-js
