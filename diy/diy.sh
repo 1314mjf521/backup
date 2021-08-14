@@ -109,6 +109,7 @@ author_name=(
   小小
   Facker
   执意
+  备份
 )
 
 ## Public
@@ -126,7 +127,7 @@ my_scripts_list_LongZhuZhu="long_super_redrain.js long_half_redrain.js"
 
 ## 温某人
 scripts_base_url_Wenmoux=${PROXY_URL}https://raw.githubusercontent.com/Wenmoux/scripts/wen/jd/
-my_scripts_list_Wenmoux="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js jd_mb.js"
+my_scripts_list_Wenmoux="jd_SplitRedPacket.js jd_ddnc_farmpark.js jd_qqxing.js chinnkarahoi_jd_bookshop.js"
 
 ## curtinlv
 scripts_base_url_curtinlv=${PROXY_URL}https://raw.githubusercontent.com/curtinlv/JD-Script/main/
@@ -142,19 +143,19 @@ my_scripts_list_jiulan="jd_joypark_task.js"
 
 ## 青蛙
 scripts_base_url_smiek2221=${PROXY_URL}https://raw.githubusercontent.com/smiek2221/scripts/master/
-my_scripts_list_smiek2221="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js gua_doge.js"
+my_scripts_list_smiek2221="jd_sign_graphics.js sign_graphics_validate.js JDJRValidator_Pure.js gua_wealth_island.js jd_necklace.js ZooFaker_Necklace.js gua_wealth_island_help.js gua_doge.js gua_xiaolong.js"
 
 ## star261
 scripts_base_url_star261=${PROXY_URL}https://raw.githubusercontent.com/star261/jd/main/scripts/
-my_scripts_list_star261="jd_fan.js jd_golden_machine.js jd_appliances.js jd_appliances.js"
+my_scripts_list_star261="jd_fan.js jd_golden_machine.js jd_appliances.js jd_appliances.js jd_decompression.js jd_star_shop.js"
 
 ## 小小
 scripts_base_url_Aaron_lv=${PROXY_URL}https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/
-my_scripts_list_Aaron_lv="jd_jxlhb.js jd_nzmh.js jd_mohe.js jd_joy_steal.js"
+my_scripts_list_Aaron_lv="jd_jxlhb.js jd_nzmh.js jd_mohe.js jd_joy_steal.js jd_sendBeans.js"
 
 ## Facker
 scripts_base_url_shufflewzc=${PROXY_URL}https://raw.githubusercontent.com/shufflewzc/faker2/main/
-my_scripts_list_shufflewzc="jd_try.js jd_DrawEntrance.js jd_moneyTree_heip.js"
+my_scripts_list_shufflewzc="jd_try.js jd_DrawEntrance.js jd_moneyTree_heip.js jd_jxmc.js"
 
 ## 执意
 scripts_base_url_Ariszy=${PROXY_URL}https://raw.githubusercontent.com/Ariszy/Private-Script/master/JD/
@@ -163,6 +164,9 @@ my_scripts_list_Ariszy="zy_ryhxj.js zy_ldhwj.js zy_qcshj.js"
 ## 怨念
 scripts_base_url_yuannian1112=${PROXY_URL}https://raw.githubusercontent.com/yuannian1112/jd_scripts/main/
 my_scripts_list_yuannian1112=""
+## 备份
+scripts_base_url_13=https://gitee.com/mjf521/JD-FreeFuck/raw/main/help/
+my_scripts_list_13="jd_cfd.js jd_cleancart.js jd_unsubscriLive.js"
 
 ##############################  随  机  函  数  ##############################
 cd ${ShellDir}
