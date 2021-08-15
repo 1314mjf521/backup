@@ -37,9 +37,9 @@ isTermux=${ANDROID_RUNTIME_ROOT}${ANDROID_ROOT}
 #ScriptsURL=git@gitee.com:mjf521/jd_scripts-2.git
 #实验
 #ScriptsURL=git@gitee.com:mjf521/script-backup.git
-#ScriptsURL=git@gitee.com:mjf521/zoo.git
+ScriptsURL=git@gitee.com:mjf521/zoo.git
 #不要问重新部署就完事了
-ScriptsURL=git@jd_base_gitee:supermanito/jd_base.git
+#ScriptsURL=git@jd_base_gitee:supermanito/jd_base.git
 
 ## 更新crontab，gitee服务器同一时间限制5个链接，因此每个人更新代码必须错开时间，每次执行git_pull随机生成。
 ## 每天次数随机，更新时间随机，更新秒数随机，至少6次，至多12次，大部分为8-10次，符合正态分布。
